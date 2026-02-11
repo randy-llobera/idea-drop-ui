@@ -40,7 +40,7 @@ const RootLayout = () => {
   );
 };
 
-function NotFound() {
+const NotFound = () => {
   return (
     <div className='flex flex-col items-center justify-center text-center py-20'>
       <h1 className='text-4xl font-bold text-gray-800 mb-4'>404</h1>
@@ -55,7 +55,7 @@ function NotFound() {
       </Link>
     </div>
   );
-}
+};
 
 export const Route = rootRoute({
   head: () => ({
