@@ -7,3 +7,10 @@ export type Idea = {
   createdAt: string;
   user: string;
 };
+
+export type NewIdea = {
+  title: string;
+  summary: string;
+  description: string;
+  tags: string[];
+};
