@@ -14,3 +14,9 @@ export type NewIdea = {
   description: string;
   tags: string[];
 };
+
+export type NewUser = {
+  name: string;
+  email: string;
+  password: string;
+};
