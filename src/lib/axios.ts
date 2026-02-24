@@ -3,7 +3,10 @@ import { getStoredAccessToken, setStoredAccessToken } from './authToken';
 import { refreshAccessToken } from '@/api/auth';
 
 const api = axios.create({
-  baseURL: `${import.meta.env.VITE_API_URL}/api`,
+  baseURL:
+    process.env.NODE_ENV === 'production'
+      ? `${import.meta.env.VITE_PRODUCTION_API_URL}/api`
+      : `${import.meta.env.VITE_API_URL}/api`,
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json',
